@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit Sharma | Premium Web Design</title>
+    <title>Rohit Sharma | High-Speed Website Developer</title>
     
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ProfessionalService",
+      "name": "Rohit Sharma Web Development",
+      "image": "https://rohitsharma.co/logo.png",
+      "url": "https://rohitsharma.co",
+      "telephone": "+919300070700",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "124"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically, a high-speed business website takes 3-5 days to complete."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my website be mobile-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every website I build is 100% responsive and optimized for mobile and desktop."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --bg-color: #0a0a0f;
-            --surface-color: #1a1a24;
-            --accent-color: #10b981; /* Premium Green */
+            --accent-color: #10b981; 
             --text-color: #f0f0f5;
             --muted-color: #6b7280;
             --glass: rgba(255, 255, 255, 0.04);
@@ -21,34 +59,23 @@
         * { box-sizing: border-box; }
 
         body { 
-            margin: 0; 
-            padding: 0;
+            margin: 0; padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: 'DM Sans', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
+            display: flex; justify-content: center; min-height: 100vh;
         }
 
-        /* Background Noise Effect */
+        /* Subtle Noise Effect */
         .grain-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none;
-            opacity: 0.03;
-            z-index: 50;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; opacity: 0.03; z-index: 50;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
         }
 
         .container {
-            width: 100%;
-            max-width: 900px;
-            padding: 40px 20px;
-            text-align: center;
-            z-index: 10;
+            width: 100%; max-width: 900px;
+            padding: 60px 20px; text-align: center; z-index: 10;
         }
 
         /* Animations */
@@ -56,123 +83,68 @@
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .animate-up { animation: fadeUp 0.8s ease-out both; }
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
 
-        /* Typography */
         .status-badge {
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            display: block;
+            color: var(--accent-color); font-weight: 600; font-size: 0.9rem;
+            margin-bottom: 20px; display: inline-block;
         }
 
         h1 {
             font-family: 'Outfit', sans-serif;
             font-size: clamp(2.5rem, 8vw, 4rem);
-            line-height: 1.1;
-            margin: 0 0 20px 0;
-            font-weight: 800;
+            line-height: 1.1; font-weight: 800; margin: 0 0 20px 0;
         }
 
         .accent { color: var(--accent-color); }
 
         .subheadline {
-            font-size: 1.2rem;
-            color: var(--muted-color);
-            max-width: 600px;
-            margin: 0 auto 50px auto;
+            font-size: 1.2rem; color: var(--muted-color);
+            max-width: 600px; margin: 0 auto 50px auto;
         }
 
-        /* Grid Cards */
+        /* Grid Section */
         .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 16px;
-            margin-bottom: 40px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px; margin-bottom: 40px;
         }
 
         .benefit-card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            padding: 30px 20px;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            background: var(--glass); border: 1px solid var(--glass-border);
+            padding: 30px 20px; border-radius: 16px;
+            transition: 0.3s;
         }
 
         .benefit-card:hover {
             border-color: rgba(16, 185, 129, 0.4);
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.06);
         }
 
-        .benefit-card h3 {
-            font-family: 'Outfit', sans-serif;
-            margin: 0 0 10px 0;
-            font-size: 1.3rem;
-        }
-
-        .benefit-card p {
-            margin: 0;
-            color: var(--muted-color);
-            font-size: 0.95rem;
-        }
-
-        /* THE PRO BUTTON AREA */
+        /* PRO BUTTON - Call to Action */
         .cta-section {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 60px 40px;
-            margin-top: 20px;
+            background: var(--glass); border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 60px 40px; margin-top: 20px;
         }
 
-        .cta-section h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-        }
-
-        /* High-Conversion Pro Button */
         .pro-btn {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            padding: 20px 45px;
-            background: var(--accent-color);
-            color: #fff;
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            border-radius: 100px;
+            position: relative; display: inline-flex; align-items: center;
+            padding: 22px 50px; background: var(--accent-color);
+            color: #fff; text-decoration: none;
+            font-family: 'Outfit', sans-serif; font-size: 1.3rem;
+            font-weight: 700; border-radius: 100px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
-            margin-bottom: 15px;
+            animation: pulse-shadow 2s infinite;
         }
 
         .pro-btn:hover {
             transform: scale(1.05) translateY(-3px);
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.5);
+            background: #0ea371;
         }
 
-        .btn-icon {
-            margin-left: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .pro-btn:hover .btn-icon {
-            transform: translateX(5px);
-        }
-
-        /* Pulse Animation */
-        .pro-btn {
-            animation: pulse-shadow 2s infinite;
-        }
+        .btn-icon { margin-left: 12px; transition: 0.3s ease; }
+        .pro-btn:hover .btn-icon { transform: translateX(8px); }
 
         @keyframes pulse-shadow {
             0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
@@ -180,30 +152,13 @@
             100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
 
-        .subtext {
-            color: var(--muted-color);
-            font-size: 0.85rem;
-            margin-top: 10px;
-        }
+        .subtext { color: var(--muted-color); font-size: 0.85rem; margin-top: 15px; }
 
-        .contact-info {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: var(--muted-color);
-            line-height: 1.6;
-        }
+        footer { margin-top: 60px; opacity: 0.4; font-size: 0.8rem; }
 
-        footer {
-            margin-top: 60px;
-            opacity: 0.4;
-            font-size: 0.8rem;
-        }
-
-        /* Responsive Mobile */
         @media (max-width: 600px) {
             h1 { font-size: 2.5rem; }
-            .cta-section { padding: 40px 20px; }
-            .pro-btn { width: 100%; justify-content: center; }
+            .pro-btn { width: 100%; justify-content: center; padding: 20px; }
         }
     </style>
 </head>
@@ -212,40 +167,39 @@
     <div class="grain-overlay"></div>
 
     <div class="container animate-up">
-        <span class="status-badge">● Available for Projects</span>
+        <span class="status-badge">● Available for New Projects</span>
         
         <h1>I Build High-Speed Websites That Get You <span class="accent">Customers</span></h1>
         
-        <p class="subheadline">Modern, fast & mobile-friendly websites for your business built with cutting-edge tech.</p>
+        <p class="subheadline">Turning visitors into loyal clients with lightning-fast, conversion-optimized websites.</p>
 
         <div class="grid">
             <div class="benefit-card">
                 <h3>Google PageSpeed 90+</h3>
-                <p>Lightning fast loading speeds.</p>
+                <p>Because slow sites kill business.</p>
             </div>
             <div class="benefit-card">
-                <h3>Mobile Ready</h3>
-                <p>Looks perfect on every screen.</p>
+                <h3>Mobile Perfect</h3>
+                <p>Seamless experience on every device.</p>
             </div>
             <div class="benefit-card">
-                <h3>SEO Ready</h3>
-                <p>Built to rank on Google search.</p>
+                <h3>SEO Optimized</h3>
+                <p>Rank higher, get found faster.</p>
             </div>
         </div>
 
         <div class="cta-section">
-            <h2>Want a website that brings calls & customers? <span class="accent">Let's talk.</span></h2>
+            <h2 style="font-family: 'Outfit'; margin-bottom: 30px;">Ready to grow your business?</h2>
             
             <a href="https://rohitsharma.co/pricing/" class="pro-btn">
                 <span>Get My Custom Site</span>
                 <span class="btn-icon">→</span>
             </a>
             
-            <p class="subtext">Free Consultation Included • No Hidden Costs</p>
+            <p class="subtext">Free Performance Audit Included • 2026 Limited Slots</p>
 
-            <div class="contact-info">
-                Email: support@rohitsharma.co <br>
-                Location: India
+            <div style="margin-top: 30px; font-size: 0.9rem; color: var(--muted-color);">
+                Email: support@rohitsharma.co | Location: India
             </div>
         </div>
 
